@@ -303,6 +303,16 @@ body{
   .card-mid{align-items:flex-start;flex-direction:column}
   .radar-readouts{gap:14px;font-size:0.72rem}
 }
+
+
+.bc-foot{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:var(--topbar-bg);border-top:1px solid var(--border);margin-top:20px;flex-wrap:wrap;gap:10px}
+.bc-foot-id{display:flex;align-items:center;gap:8px}
+.bc-foot-id img{height:24px}
+.bc-foot-id span{font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase}
+.bc-foot-links{display:flex;gap:8px}
+.bc-foot-links a{font-family:var(--font-mono);font-size:.7rem;color:var(--text-muted);text-decoration:none;padding:4px 12px;border:1px solid var(--border);border-radius:3px;letter-spacing:.5px;transition:all .2s}
+.bc-foot-links a:hover{color:var(--primary);border-color:var(--primary)}
+
 </style>
 </head>
 <body>
@@ -936,5 +946,12 @@ function init() {
 }
 init();
 </script>
+<div class="bc-foot">
+  <div class="bc-foot-id"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAgCAYAAAASYli2AAAGtklEQVR42pVWa3BU5Rl+3u+cTfZsNiQECBEwBEwCJnEQhYBQJCjMkOpU7LBrZ+gPCx1bbW2ZKjppK4dVSrgUaIrU0hSttlRmlw7XgERHhMg9hkIk5ZISCBFzD7tZsrfzfW9/ZJcGDe34/jpzvm+e93uf9/K8QMKYCQCamO2/PP3Bm8famnMTRy6vV8M3NY4DMnPyhN0bunOrftexrPbgMma2AwBMU5hsim+CmABMGrd7fSO8r3HavrU868PK+ooLJ+fbE/cOmXrC+WB22yPf8ZN0YsF+f2+0pud60ZrLnx4ordnure34YiLmeCwi4rvRcBtwgEuWrCwAEEQ6WVA3/F1qd1eja9GpHaefP7FnOTMbPrdbwsTXaKCBHBIRM3PKg/s2tZ691eGEohgBtvi5BJTmTE3FA/aMhqfH3P9rs2D2zhAUYJo6r1ghiehOLuLcaGV11YsPtl1Z9Xmsa1gs0MekacwgQQAzs4Qu9CyHE9PSRh14NX/WqzOysusBwGRT0P/I+uhFx//xxpGu5h+0hANA2JKkCcEAEaBYWSCHXeTahoRmjxxbUTl1wToi6h4U0OX1aj63W+oA3r52bt7bl2tXnQl1TvEH/AALSYK0fqeQgNSMVCcmG8OvPTUs74VBM+UqKKCSkhI69JNMsXPmi41N7+76S1co1NerosVdImKoSEQRNIAgiATHwpHYdS06LI11umvIME1hAmgoLCSf2y0BoD0czn/xzJ7VR7tanm4J3gTUbX6k7jDoyfRxlfpXcbzM2tC2S2PnZ0244gEwO17IJZ+s0DLt9kt20Hc3X/ps4Zam2jW1N1ty2AIxAAYLIgjx1dZzAcm/OVvzaWnNtr8yc87heCFndhSyySzC5sKkJfkP7Rhvc24ThkMwWA58kD5IsKop5Ldaou3fn3Rg8xNLa/et3fjwE5uI6BZMiAKXF4WFLq014jdUnDAisGJYllIYrNk5iQTLYEie624duvXLhvJHP9pau/HCiQV2D6mGInfUB4CJ4ngkWVqa4XToGXqydvfpIYQmhCZ7AwGrprt54trGozvnHXpvz6HmxiK43TIqrZhkBUrSku9LGx55xpldsTh7ysrBWs8+bveGi1fD/tFCgRQgCKxYSZDDELlJqZEnR+Stbo+Fx+wPXF0y25FV9crEWWUzs7Lr+S69bH/kwJarJ6IdIxEMW0SaxgSigYVsOFDgHIFncx5cWZZf/FoQQO7+iuRFpT+LUWIM+dxumcj0e43109+9Xvf62b7OuV29AUCxRUR6/AXMrCSIxb2O9J6ZI3J2vPPQwrWGQVfunFpel8Yur6L+WucUoeOluuole9sumg2Rnnsj/iCT0BUIWiI0BiM5xcDEpCE9j2WMX7OhuPQP9NKJqrLxGSOO/TS/+DAP0A+f280AFDMPX3x61xtH2pp+/O9IAAjHJAmNGPjv9GGpp2eOxEL7mPVUXPVWfYeIFj2Wnr3uz9MXlBNRDwBhMqMBPvKRW2oAqlouz9jUeKz8ZLDj0c6gH5BQIBLxMC222+g76eO8Qmhad1OgE39vv7Bs6sG36pbXf/xMitCVh0j5PjlPJrOQXpc2f0zesSNzn5v987HTfjg5bVRzUpJNEDPHpw4RSJPMOk078Mejp4JtMzhqRaEhKdOZjqnOkR8sHf/IK/Oy76sHABd7NZcPcLvdqr8geOhTR96v2tN+eTrFpGIASNa1uamjdwsikvH20UmRau/plvu7m+b/6J97jz93fOcqZk71kVu6z7vZZKbc/RXJRNRzKxyqFoadmJkBJgKpoJIkWKnUfk0iCUCQpmsIxeSV3s6Uv3VcLJte/afa9Q1Hv2f3kPIQqZjRTSazuBkOUX+sxGCWLEgYLEaLSen3fJTjHA62CRsrKQFWTNCIBPf1Bq2TN7/IX3fl+Pulh7ftre1ufeDaHE/YQ6RsutDALFlawjlkiG2GkfmvBTlFq8kGwNdUP2fL1bMrTwe/nNF5KwBItoiEdls/pGSRYmj5empo3qi89b9/uHTF5KrNy87Zo+V5fRScmzVh45tTS8uJKEQwTQGPRw2xJePlM9XPVt24sPzzSM+4WwE/AF0SDdAPlpojPQ0T4KibnpktmmN9rb8tenzp/WkjLia0iAaIUiKDac+f2vOLIx3Xll20eg0ZDIFIMBMzmIU9xUChkdG2eOykX7088VtbQ1D960lJvy5/Te0S35c6OwtcNb7t9+xaa2H7cha+1zl/X0XvC6f3epjZ2a87+P8LFDMTDpk6ACQBqGys+/bMDyvPP/7xO4c/u3FjCt3WnsF3m/8Aau2Bd1gq2v8AAAAASUVORK5CYII=" alt="BOT Chain"><span>BOT Chain</span></div>
+  <div class="bc-foot-links">
+    <a href="https://botchain.ai" target="_blank" rel="noopener">botchain.ai</a>
+    <a href="https://scan.botchain.ai" target="_blank" rel="noopener">explorer</a>
+  </div>
+</div>
 </body>
 </html>
